@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Java - 标签 - 夕漫的个人博客</title>
+        <link>http://wrl.ink/tags/java/</link>
+        <description>Java - 标签 - 夕漫的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>weironglu9586@gmail.com (夕漫)</managingEditor>
+            <webMaster>weironglu9586@gmail.com (夕漫)</webMaster><atom:link href="http://wrl.ink/tags/java/" rel="self" type="application/rss+xml" /></channel>
+</rss>

@@ -1,0 +1,14 @@
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    ><url>
+            <loc>http://wrl.ink/posts/</loc><lastmod>2023-03-15T20:48:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc><lastmod>2023-03-15T20:48:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://wrl.ink/about/</loc><lastmod>2023-03-15T20:48:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://wrl.ink/</loc><lastmod>2023-03-15T20:48:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://wrl.ink/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://wrl.ink/tags/java/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://wrl.ink/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://wrl.ink/categories/%E6%8A%80%E6%9C%AF/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://wrl.ink/categories/%E7%94%9F%E6%B4%BB/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://wrl.ink/friends/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

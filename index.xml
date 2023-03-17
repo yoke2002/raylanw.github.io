@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>夕漫的个人博客</title>
+        <link>http://wrl.ink/</link>
+        <description>这是我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>weironglu9586@gmail.com (夕漫)</managingEditor>
+            <webMaster>weironglu9586@gmail.com (夕漫)</webMaster><lastBuildDate>Wed, 15 Mar 2023 20:48:58 &#43;0800</lastBuildDate>
+            <atom:link href="http://wrl.ink/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Windows 下 Java 环境配置</title>
+    <link>http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+    <pubDate>Wed, 15 Mar 2023 20:48:58 &#43;0800</pubDate>
+    <author>夕漫</author>
+    <guid>http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+    <description><![CDATA[下载 JDK JDK 是 Java 软件开发工具包，供开发人员使用，里面包含 JRE；JRE 是 Java 软件运行环境，如果只需要运行别人开发好的 Java 软件，只需要下载 JRE；JV]]></description>
+</item>
+</channel>
+</rss>

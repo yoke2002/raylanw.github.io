@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>生活 - 分类 - 夕漫的个人博客</title>
+        <link>http://wrl.ink/categories/%E7%94%9F%E6%B4%BB/</link>
+        <description>生活 - 分类 - 夕漫的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>weironglu9586@gmail.com (夕漫)</managingEditor>
+            <webMaster>weironglu9586@gmail.com (夕漫)</webMaster><atom:link href="http://wrl.ink/categories/%E7%94%9F%E6%B4%BB/" rel="self" type="application/rss+xml" /></channel>
+</rss>

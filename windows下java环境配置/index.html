@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Windows 下 Java 环境配置 - 夕漫的个人博客</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:title" content="Windows 下 Java 环境配置" />
+<meta property="og:description" content="下载 JDK JDK 是 Java 软件开发工具包，供开发人员使用，里面包含 JRE；JRE 是 Java 软件运行环境，如果只需要运行别人开发好的 Java 软件，只需要下载 JRE；JV" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" /><meta property="og:image" content="http://wrl.ink/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-15T20:48:58+08:00" />
+<meta property="article:modified_time" content="2023-03-15T20:48:58+08:00" /><meta property="og:site_name" content="我的网站" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://wrl.ink/logo.png"/>
+
+<meta name="twitter:title" content="Windows 下 Java 环境配置"/>
+<meta name="twitter:description" content="下载 JDK JDK 是 Java 软件开发工具包，供开发人员使用，里面包含 JRE；JRE 是 Java 软件运行环境，如果只需要运行别人开发好的 Java 软件，只需要下载 JRE；JV"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Windows 下 Java 环境配置",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/wrl.ink\/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE\/"
+        },"genre": "posts","wordcount":  627 ,
+        "url": "http:\/\/wrl.ink\/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE\/","datePublished": "2023-03-15T20:48:58+08:00","dateModified": "2023-03-15T20:48:58+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "夕漫"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="夕漫的个人博客">夕漫的个人博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"><i class="fa fa-book" aria-hidden="true"></i> 文章 </a><a class="menu-item" href="/tags/"><i class="fa fa-tags" aria-hidden="true"></i> 标签 </a><a class="menu-item" href="/categories/%E6%8A%80%E6%9C%AF"><i class="fa fa-bolt" aria-hidden="true"></i> 技术 </a><a class="menu-item" href="/categories/%E7%94%9F%E6%B4%BB"><i class="fa fa-heart" aria-hidden="true"></i> 生活 </a><a class="menu-item" href="/friends/"><i class="fa fa-link" aria-hidden="true"></i> 友链 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="夕漫的个人博客">夕漫的个人博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title=""><i class="fa fa-book" aria-hidden="true"></i>文章</a><a class="menu-item" href="/tags/" title=""><i class="fa fa-tags" aria-hidden="true"></i>标签</a><a class="menu-item" href="/categories/%E6%8A%80%E6%9C%AF" title=""><i class="fa fa-bolt" aria-hidden="true"></i>技术</a><a class="menu-item" href="/categories/%E7%94%9F%E6%B4%BB" title=""><i class="fa fa-heart" aria-hidden="true"></i>生活</a><a class="menu-item" href="/friends/" title=""><i class="fa fa-link" aria-hidden="true"></i>友链</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Windows 下 Java 环境配置</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>夕漫</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-15">2023-03-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 627 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载-jdk">下载 JDK</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#环境变量配置">环境变量配置</a></li>
+    <li><a href="#第一个-java-程序">第一个 Java 程序</a></li>
+    <li><a href="#说明">说明</a></li>
+    <li><a href="#下载-intellij-idea">下载 IntelliJ IDEA</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="下载-jdk">下载 JDK</h2>
+<blockquote>
+<p>JDK 是 Java 软件开发工具包，供开发人员使用，里面包含 JRE；JRE 是 Java 软件运行环境，如果只需要运行别人开发好的 Java 软件，只需要下载 JRE；JVM 是 Java 虚拟机，是 Java 字节码运行的一个容器。</p>
+</blockquote>
+<p>地址：<a href="https://www.oracle.com/sg/java/technologies/downloads/" target="_blank" rel="noopener noreffer ">Java Downloads</a></p>
+<p>主流版本：</p>
+<ol>
+<li>Java 8（目前常用）</li>
+<li>Java 11</li>
+<li>Java 17</li>
+</ol>
+<h2 id="安装">安装</h2>
+<blockquote>
+<p>我安装的是 JDK 1.8，<del>你不升我不升，来世还用 Java 8</del></p>
+</blockquote>
+<p>和安装普通软件一样，选择好路径下一步即可。</p>
+<h2 id="环境变量配置">环境变量配置</h2>
+<ol>
+<li>新建 JAVA_HOME，值为 JDK 安装路径；</li>
+<li>新建 CLASSPATH，值为 <code>.;%JAVA_HOME%libdt.jar;%JAVA_HOME%libtools.jar</code>；</li>
+<li>在系统 Path 中新建环境变量添加：<code>%JAVA_HOME%\bin</code> 和 <code>%JAVA_HOME%\jre\bin</code>；</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161147051.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161147051.png, https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161147051.png 1.5x, https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161147051.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161147051.png"
+        title="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161147051.png" /></p>
+<ol start="4">
+<li>
+<p>最后打开终端，输入 <code>java -version</code> 测试是否安装成功。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161247758.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161247758.png, https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161247758.png 1.5x, https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161247758.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161247758.png"
+        title="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309161247758.png" /></p>
+</li>
+</ol>
+<h2 id="第一个-java-程序">第一个 Java 程序</h2>
+<p>代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 注意文件名应该与类名一致
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World!&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行结果：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309162006758.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309162006758.png, https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309162006758.png 1.5x, https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309162006758.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309162006758.png"
+        title="https://cdn.jsdelivr.net/gh/raylanw/img-source/java/image-20230309162006758.png" /></p>
+<p>编译时带 <code>.java</code> 后缀，运行时不要带 <code>.class</code> 后缀，也不要写路径，不然会提示**“错误: 找不到或无法加载主类 ..HelloWorld`”**</p>
+<h2 id="说明">说明</h2>
+<ol>
+<li>如果直接在终端中输入命令（如 <code>javac</code> 和 <code>java</code>），如果不是系统自带命令，则会默认从当前目录查找，如果找不到，就会查找系统的环境变量。现在我们想要在任意目录下执行 <code>javac</code> 和 <code>java</code> 命令，那么就需要在环境变量中添加 jdk 的 bin 目录路径。</li>
+<li>CLASSPATH 的作用是告诉 JVM 类库的加载位置，也就是执行 <code>.class</code> 文件的时候。</li>
+</ol>
+<h2 id="下载-intellij-idea">下载 IntelliJ IDEA</h2>
+<p>Java 最好用的 IDE，在校带学生可以用一下学校邮箱认证一下，就可以使用 JetBrains 全家桶专业版，后面 JavaWeb 开发时使用专业版的 IDEA 体验会更好。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-03-15</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-title="Windows 下 Java 环境配置" data-via="raylanw_"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-title="Windows 下 Java 环境配置"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-title="Windows 下 Java 环境配置"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://wrl.ink/windows%E4%B8%8Bjava%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" data-title="Windows 下 Java 环境配置"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">夕漫</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
